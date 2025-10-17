@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misión y Visión</title>
+  <link rel="stylesheet" href="../Styles/Styles.css">
+</head>
+<body>
+  <!-- HEADER (idéntico al de las demás páginas) -->
+  <header>
+    <div class="logo-superior">
+      <img src="../assets/logo2.png" alt="Logo empresa">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="info.html">Quiénes Somos</a></li>
+        <li><a href="Mision_Vision.html" class="activo">Misión y Visión</a></li>
+        <li><a href="valores.html">Valores</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="mision-vision">
+  <h2>Nuestra Misión y Visión</h2>
+  <div class="mision-vision-container">
+    <div class="mision-card">
+      <div class="icono-mv">
+        <!-- Ícono de misión (bandera) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0d47a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h7l1 3h8v13H4z"/>
+        </svg>
+      </div>
+      <h3>MISIÓN</h3>
+      <p>
+        Proveer soluciones completas y confiables para el mantenimiento y operación de maquinaria
+        pesada y vehículos diésel, a través de suministros de calidad, atención técnica especializada y
+        precios justos, contribuyendo al éxito y continuidad de las obras de nuestros clientes.
+
+      </p>
+    </div>
+
+    <div class="vision-card">
+      <div class="icono-mv">
+        <!-- Ícono de visión (ojo o vista) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0d47a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <h3>VISIÓN</h3>
+      <p>
+        Ser la empresa líder en el suministro de refacciones y servicios para motores diésel en la región,
+        reconocida por nuestra confiabilidad, asesoría técnica y compromiso con la operación eficiente
+        de nuestros clientes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Fondo borroso + modal expandido -->
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal">
+      <span class="cerrar" id="cerrar">&times;</span>
+      <div class="modal-content"></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-centro">
+      <p>© 2025 Diesel Service Durango. Todos los derechos reservados.</p>
+    </div>
+
+    <div class="footer-contenido">
+      <div class="footer-izquierda">
+        <h3>Contacto:</h3>
+        <p>Email: dieselservicedurango@gmail.com</p>
+        <p>Teléfono: 618 369 7041</p>
+        <p>Dirección: Calle Águila Imperial 112 Fracc. Las Águilas Durango DGO.</p>
+      </div>
+
+      <div class="footer-derecha">
+        <a href="#" target="_blank" aria-label="Facebook">
+          <img src="../assets/logo facebook.png" alt="Icono Facebook" class="icono-red-social">
+        </a>
+        <a href="#" target="_blank" aria-label="WhatsApp">
+          <img src="..//assets/logo whatsapp.jpg" alt="Icono WhatsApp" class="icono-red-social">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+  const cards = document.querySelectorAll('.mision-card, .vision-card');
+  const overlay = document.getElementById('overlay');
+  const modal = document.getElementById('modal');
+  const cerrar = document.getElementById('cerrar');
+  const modalContent = document.querySelector('.modal-content');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('h3').textContent;
+      const text = card.querySelector('p').textContent;
+      const icon = card.querySelector('.icono-mv').innerHTML;
+
+      modalContent.innerHTML = `
+        <div class="icono-mv">${icon}</div>
+        <h3>${title}</h3>
+        <p>${text}</p>
+      `;
+      overlay.classList.add('active');
+    });
+  });
+
+  cerrar.addEventListener('click', () => overlay.classList.remove('active'));
+
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) overlay.classList.remove('active');
+  });
+</script>
+
+</body>
+
+<script>
+  document.querySelectorAll('.mision-card, .vision-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('active');
+    });
+  });
+</script>
+
+</html>
