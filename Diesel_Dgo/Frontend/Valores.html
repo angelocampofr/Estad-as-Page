@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valores</title>
+  <link rel="stylesheet" href="../Styles/Styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-superior">
+    <a href="Home.html">
+      <img src="../assets/logo2.png" alt="Logo empresa">
+    </a>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="info.html">Quiénes Somos</a></li>
+      <li><a href="Mision_Vision.html">Misión y Visión</a></li>
+      <li><a href="Valores.html" class="activo">Valores</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="mision-vision">
+  <h2>Nuestros Valores</h2>
+
+  <div class="mision-vision-container" style="flex-direction: column; gap: 40px;">
+
+ 
+    <!-- COMPROMISO -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO CHECK -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h3>COMPROMISO</h3>
+      <p>Acompañamos a nuestros clientes para que su maquinaria no se detenga.</p>
+    </div>
+
+    <!-- CALIDAD -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO DIAMANTE -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <polygon points="12 2 2 9 12 22 22 9 12 2"/>
+        </svg>
+      </div>
+      <h3>CALIDAD</h3>
+      <p>Solo ofrecemos productos que cumplen altos estándares técnicos.</p>
+    </div>
+
+    <!-- ASESORÍA -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO LÁMPARA/IDEA -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="10" r="4"/>
+          <path d="M9 16h6m-5 4h4"/>
+        </svg>
+      </div>
+      <h3>ASESORÍA</h3>
+      <p>Orientamos con conocimiento especializado para cada necesidad.</p>
+    </div>
+
+    <!-- PUNTUALIDAD -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO RELOJ -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <h3>PUNTUALIDAD</h3>
+      <p>Sabemos que el tiempo es crucial, entregamos a tiempo.</p>
+    </div>
+
+    <!-- CONFIANZA -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO ESCUDO -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 2l8 4v6c0 5.25-3.75 10-8 10S4 17.25 4 12V6l8-4z"/>
+        </svg>
+      </div>
+      <h3>CONFIANZA</h3>
+      <p>Somos el respaldo técnico en cada proyecto.</p>
+    </div>
+
+    <!-- LEALTAD -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO CORAZÓN -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 21s-7-4.35-7-10a5 5 0 0 1 10 0c0 5.65-7 10-7 10z"/>
+        </svg>
+      </div>
+      <h3>LEALTAD</h3>
+      <p>Construimos relaciones sólidas y duraderas con aliados y compañeros.</p>
+    </div>
+
+    <!-- HONESTIDAD -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO MANO / APRETÓN -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M3 11l5 5a3 3 0 0 0 4-4l-5-5L3 7v4z"/>
+          <path d="M21 13l-5 5a3 3 0 0 1-4-4l5-5 4 2v4z"/>
+        </svg>
+      </div>
+      <h3>HONESTIDAD</h3>
+      <p>Actuamos con transparencia en cada trato.</p>
+    </div>
+
+    <!-- INTEGRIDAD -->
+    <div class="valor-card">
+      <div class="icono-mv">
+        <!-- ICONO BALANZA -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#0d47a1" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 3v18M6 9h12"/>
+          <path d="M6 9l-3 5h6l-3-5zM18 9l-3 5h6l-3-5z"/>
+        </svg>
+      </div>
+      <h3>INTEGRIDAD</h3>
+      <p>Actuamos con transparencia en cada trato.</p>
+    </div>
+
+  </div>
+
+  <!-- MODAL -->
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal">
+      <span class="cerrar" id="cerrar">&times;</span>
+      <div class="modal-content"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  
+  <div class="footer-centro">
+    <p>© 2025 Diesel Service Durango. Todos los derechos reservados.</p>
+  </div>
+
+  <div class="footer-contenido">
+    <div class="footer-izquierda">
+      <h3>Contacto:</h3>
+      <p>Email: dieselservicedurango@gmail.com</p>
+      <p>Teléfono: 618 369 7041</p>
+      <p>Dirección: Calle Águila Imperial 112 Fracc. Las Águilas Durango DGO.</p>
+    </div>
+
+    <div class="footer-derecha">
+      <a href="#" target="_blank" aria-label="Facebook">
+        <img src="../assets/logo facebook.png" alt="Icono Facebook" class="icono-red-social">
+      </a>
+      <a href="#" target="_blank" aria-label="WhatsApp">
+        <img src="../assets/logo whatsapp.jpg" alt="Icono WhatsApp" class="icono-red-social">
+      </a>
+    </div>
+  </div>
+
+        <!-- Créditos-->
+<div class="footer-creditos">
+  <p>Made by Gustavo Franco in UTD</p>
+</div>
+
+
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.valor-card');
+  const overlay = document.getElementById('overlay');
+  const modal = document.getElementById('modal');
+  const cerrar = document.getElementById('cerrar');
+  const modalContent = document.querySelector('.modal-content');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('h3').textContent;
+      const text = card.querySelector('p').textContent;
+      const icon = card.querySelector('.icono-mv').innerHTML;
+
+      modalContent.innerHTML = `
+        <div class="icono-mv">${icon}</div>
+        <h3>${title}</h3>
+        <p>${text}</p>
+      `;
+      overlay.classList.add('active');
+    });
+  });
+
+  cerrar.addEventListener('click', () => overlay.classList.remove('active'));
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('active'); });
+</script>
+
+</body>
+</html>
